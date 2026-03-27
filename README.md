@@ -18,8 +18,22 @@ Landing page do projeto **Manivis** — soluções sustentáveis para tratamento
 |------------|-------------------------------------|
 | `index.html` | Marcação HTML e script de animação ao scroll |
 | `styles.css` | Estilos globais, secções e responsividade   |
+| `vercel.json` | Configuração de deploy na Vercel (site estático) |
 
 Fontes carregadas via Google Fonts (Bebas Neue, DM Sans).
+
+## Deploy na Vercel
+
+1. Envia este repositório para o GitHub (ou GitLab / Bitbucket).
+2. Em [vercel.com](https://vercel.com) → **Add New Project** → importa o repositório.
+3. Em **Configure Project**, deixa assim:
+   - **Framework Preset:** `Other`
+   - **Root Directory:** `.` (raiz), *a menos que* o projeto esteja dentro de uma subpasta — nesse caso escolhe essa pasta (onde está o `index.html`).
+   - **Build Command:** *vazio*
+   - **Output Directory:** *vazio* (não uses `dist` nem `build` — não há build)
+4. **Deploy.**
+
+O ficheiro `vercel.json` indica site estático (`framework: null`) e URLs limpas. Se ainda aparecer **NOT_FOUND**, confirma que o URL é o do deployment ativo e que o **Root Directory** aponta para a pasta que contém `index.html`.
 
 ## Como visualizar
 
@@ -33,7 +47,7 @@ Depois aceda ao URL indicado no terminal (geralmente `http://localhost:3000`).
 
 ## Fotos e redes na secção Time
 
-As fotos estão em `public/` (`fota.jpg`, `1772452217816.jpg`) e são referenciadas em `index.html`. Os links do **LinkedIn** já apontam para os perfis indicados. Os ícones de **Instagram** continuam com `href="#"` até serem definidos os perfis.
+As fotos estão em `public/` (`fota.jpg`, `1772452217816.jpg`) e são referenciadas em `index.html`. Os links do **LinkedIn** já apontam para os perfis indicados. Os perfis de **Instagram** estão configurados nos respetivos links.
 
 ## Créditos
 
