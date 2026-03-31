@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Manivis',
   description:
-    'Manipueira — soluções sustentáveis para tratamento e reaproveitamento.',
+    'Da raiz ao resultado: inovação sustentável — gestão, tratamento e reaproveitamento da manipueira.',
 };
 
 export default function RootLayout({

@@ -1,6 +1,10 @@
 import Image from 'next/image';
+import { ProblemCards } from './components/ProblemCards';
 import { RevealOnScroll } from './components/RevealOnScroll';
 import { SiteNav } from './components/SiteNav';
+
+const MANIPUEIRA_IMG =
+  'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=900&q=80';
 
 export default function Home() {
   return (
@@ -11,17 +15,12 @@ export default function Home() {
 
       <section id="hero">
         <div className="hero-content">
-          <p className="hero-eyebrow">Manivis</p>
-          <h1 className="hero-title">
-            A MANIPUEIRA
-            <br />
-            TRANSFORMA
-            <br />
-            RESÍDUO EM
-            <br />
-            RIQUEZA.
-          </h1>
-          <p className="hero-sub">Você conhece a manipueira?</p>
+          <p className="hero-eyebrow">MANIVIS</p>
+          <h1 className="hero-title">Da raiz ao resultado: inovação sustentável.</h1>
+          <p className="hero-sub">
+            A MANIVIS transforma a manipueira em soluções sustentáveis, promovendo tratamento,
+            reaproveitamento e geração de valor para o meio ambiente, a agricultura e a sociedade.
+          </p>
           <a href="#manipueira" className="btn-primary">
             Saiba mais
           </a>
@@ -30,90 +29,83 @@ export default function Home() {
 
       <section id="manipueira">
         <div className="manip-text reveal">
-          <h2 className="section-title">MANIPUEIRA</h2>
+          <h2 className="section-title">O que é a manipueira?</h2>
           <p className="section-body">
-            A manipueira é o líquido extraído da mandioca quando ela é prensada no processo de fabricação da farinha. Tanto a mandioca quanto esse líquido contêm ácido cianídrico, venenoso e nocivo à alimentação humana e animal.
+            A manipueira é um resíduo líquido altamente poluente gerado no processamento da mandioca.
+            Ela contém alta carga orgânica, compostos tóxicos, principalmente ácido cianídrico, além de
+            nutrientes e matéria orgânica.
+          </p>
+          <p className="section-body manip-text-gap">
+            Quando descartada incorretamente, a manipueira apresenta alto potencial poluidor, podendo
+            causar impactos ambientais significativos, semelhantes aos provocados por efluentes
+            industriais.
           </p>
         </div>
         <div className="manip-img reveal">
-          <div className="manip-img-placeholder">📸 Imagem da manipueira</div>
+          <Image
+            className="manip-photo"
+            src={MANIPUEIRA_IMG}
+            alt="Mandioca em processamento — contexto do resíduo líquido (manipueira)"
+            width={900}
+            height={675}
+            sizes="(max-width: 768px) 100vw, 500px"
+          />
         </div>
       </section>
 
       <section id="problemas">
         <div className="prob-header reveal">
-          <h2 className="section-title">
-            PRINCIPAIS
-            <br />
-            PROBLEMAS
-          </h2>
+          <h2 className="section-title">Principais problemas</h2>
+          <p className="prob-section-sub">
+            Entenda os impactos ambientais, sanitários e sociais causados pelo descarte inadequado da
+            manipueira.
+          </p>
         </div>
-        <div className="prob-grid">
-          <div className="prob-card reveal">
-            <div className="prob-card-icon">💨</div>
-            <div className="prob-card-title">Qualidade do Ar</div>
-            <ul>
-              <li>Emissão de gases</li>
-              <li>Forte odor</li>
-            </ul>
-          </div>
-          <div className="prob-card reveal">
-            <div className="prob-card-icon">🌿</div>
-            <div className="prob-card-title">Biodiversidade</div>
-            <ul>
-              <li>Morte de seres aquáticos</li>
-              <li>Danos ao ecossistema e plantas</li>
-            </ul>
-          </div>
-          <div className="prob-card reveal">
-            <div className="prob-card-icon">💧</div>
-            <div className="prob-card-title">Água</div>
-            <ul>
-              <li>Contaminação dos lençóis freáticos, rios e lagoas</li>
-            </ul>
-          </div>
-          <div className="prob-card reveal">
-            <div className="prob-card-icon">🏥</div>
-            <div className="prob-card-title">Saúde Pública</div>
-            <ul>
-              <li>Afeta células nervosas</li>
-              <li>Inibidor das células na cadeia respiratória</li>
-            </ul>
-          </div>
-        </div>
-        <div className="prob-stat reveal">
-          <strong>Por que a manipueira deve ser abordada como um problema?</strong>
-          <br />
-          <br />
-          Em Pernambuco no ano de 2023 foram produzidos aproximadamente 65.592.500 litros de manipueira segundo o IBGE.
-        </div>
+        <ProblemCards />
       </section>
 
       <section id="produtos">
         <div className="produtos-header reveal">
-          <h2 className="section-title">
-            CONHEÇA NOSSOS
-            <br />
-            PRODUTOS.
-          </h2>
+          <h2 className="section-title">Conheça nossos produtos</h2>
         </div>
         <div className="produtos-grid">
           <div className="produto-card reveal">
             <div className="produto-img-placeholder">🌱</div>
             <div className="produto-body">
-              <div className="produto-nome">Biodigestor</div>
+              <div className="produto-nome">Biofertilizante</div>
+              <p className="produto-desc">
+                Solução sustentável para aproveitamento da manipueira com potencial de aplicação
+                agrícola.
+              </p>
+            </div>
+          </div>
+          <div className="produto-card reveal">
+            <div className="produto-img-placeholder">🦟</div>
+            <div className="produto-body">
+              <div className="produto-nome">Bioinseticida</div>
+              <p className="produto-desc">
+                Alternativa derivada do reaproveitamento da manipueira com foco em soluções para o
+                campo.
+              </p>
             </div>
           </div>
           <div className="produto-card reveal">
             <div className="produto-img-placeholder">🔥</div>
             <div className="produto-body">
               <div className="produto-nome">Biogás</div>
+              <p className="produto-desc">
+                Aproveitamento energético da manipueira para geração de energia de forma mais
+                sustentável.
+              </p>
             </div>
           </div>
           <div className="produto-card reveal">
-            <div className="produto-img-placeholder">🌾</div>
+            <div className="produto-img-placeholder">♻️</div>
             <div className="produto-body">
-              <div className="produto-nome">Biofertilizante e Transportação de Manipueira</div>
+              <div className="produto-nome">Gestão de resíduos (manipueira)</div>
+              <p className="produto-desc">
+                Solução voltada ao tratamento, manejo e reaproveitamento adequado da manipueira.
+              </p>
             </div>
           </div>
         </div>
@@ -121,19 +113,16 @@ export default function Home() {
 
       <section id="oferecemos">
         <div className="reveal">
-          <h2 className="section-title">
-            O que
-            <br />
-            oferecemos?
-          </h2>
+          <h2 className="section-title">O que oferecemos</h2>
           <p className="section-body">
-            Soluções sustentáveis que transformam o resíduo da mandioca em produtos de alto valor agregado, beneficiando o meio ambiente e as comunidades locais.
+            A MANIVIS oferece soluções voltadas à gestão, tratamento e reaproveitamento da manipueira,
+            promovendo inovação sustentável e geração de valor para a cadeia produtiva da mandioca.
           </p>
         </div>
         <div className="oferecemos-grid">
           <div className="oferta-item reveal">
             <div className="oferta-icon">♻️</div>
-            <div className="oferta-label">Tratamento e reaproveitamento da manipueira</div>
+            <div className="oferta-label">Gestão, tratamento e reaproveitamento da manipueira</div>
           </div>
           <div className="oferta-item reveal">
             <div className="oferta-icon">⚡</div>
@@ -141,22 +130,24 @@ export default function Home() {
           </div>
           <div className="oferta-item reveal">
             <div className="oferta-icon">🌱</div>
-            <div className="oferta-label">Biofertilizantes para agricultura</div>
+            <div className="oferta-label">Biofertilizantes</div>
           </div>
           <div className="oferta-item reveal">
-            <div className="oferta-icon">🚛</div>
-            <div className="oferta-label">Logística e transporte sustentável</div>
+            <div className="oferta-icon">🦟</div>
+            <div className="oferta-label">Bioinseticidas</div>
+          </div>
+          <div className="oferta-item reveal">
+            <div className="oferta-icon">📋</div>
+            <div className="oferta-label">
+              Consultoria e acompanhamento técnico para melhor desempenho da lavoura de mandioca
+            </div>
           </div>
         </div>
       </section>
 
       <section id="time">
         <div className="time-header reveal">
-          <h2 className="section-title">
-            CONHEÇA NOSSO
-            <br />
-            TIME
-          </h2>
+          <h2 className="section-title">CONHEÇA NOSSO TIME</h2>
           <p className="section-body time-intro">
             As pessoas por trás do projeto Manivis — comprometidas com inovação e sustentabilidade.
           </p>
@@ -385,7 +376,9 @@ export default function Home() {
       <footer>
         <div className="footer-brand">
           <div className="footer-logo">MANIVIS</div>
-          <div className="footer-tagline">© 2024 Manivis · Transformando resíduo em riqueza</div>
+          <div className="footer-tagline">
+            © 2024 MANIVIS · Da raiz ao resultado: inovação sustentável.
+          </div>
           <div className="footer-socials" aria-label="Redes sociais Manivis">
             {/* Se o URL do LinkedIn da empresa for outro, altere o href abaixo. */}
             <a
