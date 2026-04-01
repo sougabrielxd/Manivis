@@ -705,6 +705,16 @@ body {
   margin-right: calc(-1 * var(--page-pad-x));
   scroll-padding: var(--page-pad-x);
   -webkit-overflow-scrolling: touch;
+  /* Ocultar scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* Efeito de fade nas bordas */
+  mask-image: linear-gradient(to right, transparent 0%, black var(--page-pad-x), black calc(100% - var(--page-pad-x)), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black var(--page-pad-x), black calc(100% - var(--page-pad-x)), transparent 100%);
+}
+
+.time-grid::-webkit-scrollbar {
+  display: none;
 }
 .time-card {
   background: rgba(255,255,255,0.08);
