@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ProblemCards } from './components/ProblemCards';
 import { RevealOnScroll } from './components/RevealOnScroll';
+import { ScrollToTop } from './components/ScrollToTop';
 import { SiteNav } from './components/SiteNav';
 import TimeCarousel from './components/TimeCarousel';
 
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <>
       <RevealOnScroll />
+      <ScrollToTop />
 
       <SiteNav />
 
