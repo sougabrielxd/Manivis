@@ -59,7 +59,12 @@ export function ProblemCards() {
             </span>
             <span className="prob-card-title">{p.title}</span>
             <p className="prob-card-summary">{p.summary}</p>
-            <span className="prob-card-hint">Saiba mais</span>
+            <span className="prob-card-hint">
+              Saiba mais
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden>
+                <path d="M1.5 5.5h8M6 2l3.5 3.5L6 9" stroke="rgba(255,255,255,0.4)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </span>
           </button>
         ))}
       </div>
